@@ -1,0 +1,282 @@
+1. What is the Virtual DOM? How does React use it?  '👍'
+2. Difference between useEffect and useLayoutEffect?  '👍'  
+3. Explain React Fiber Architecture. 					'👍'
+4. How does React Reconciliation work?				'👍'
+5. Difference between Controlled and Uncontrolled Components?  '👍'
+6. Why do we need keys in lists?						'👍'
+7. What problems can occur when using array index as key? '👍'
+8. Explain React.memo, useMemo, and useCallback.  '👍'
+9. What causes unnecessary re-renders?     '👍'
+10. What is Context API? When should Redux be preferred?  '👍'
+
+*********  Advanced React
+   
+11. How would you design a reusable component library?  '👍'
+12. How do you implement Error Boundaries? '👍'
+13. Explain Higher Order Components (HOC). '👍'
+14. What are Render Props?
+15. Explain Compound Components Pattern.
+16. Difference between Client-side Rendering and Server-side Rendering.
+17. How would you implement Infinite Scroll?  '👍'
+18. How would you prevent API calls on every keystroke?  '👍'
+19. How do you optimize a slow React application?
+20. Explain code splitting and lazy loading.  '👍'
+
+******* TypeScript 
+
+21. Difference between type and interface.
+22. Explain Generics.
+23. What is keyof?
+24. What are Utility Types?
+25. Difference between any, unknown, and never.
+26. Explain Union and Intersection types.
+27. What is Type Inference?
+28. What is Type Narrowing?
+29. How do you type React Props?
+30. How do you type custom hooks?
+
+******** JavaScript Questions
+31. Explain Event Loop.
+32. Difference between Microtask Queue and Callback Queue.
+33. Explain Closures with example.
+34. Difference between var, let, and const.
+35. Explain Hoisting.
+36. Difference between == and ===.
+37. Explain Prototype and Prototype Chain.
+38. What is this keyword?
+39. Explain call, apply, and bind.
+40. What are Promises?
+44. Explain Debounce and Throttle.
+45. Difference between Shallow Copy and Deep Copy.
+
+
+**** Next.js Questions
+
+46. Difference between SSR, SSG, ISR, and CSR.
+47. Explain App Router.
+48. Difference between Server Components and Client Components.
+49. What is Middleware in Next.js?
+50. Explain Route Protection.
+51. What is Hydration?
+52. What are Server Actions?
+53. How does image optimization work in Next.js?
+54. What is Turbopack?
+55. Difference between Redirect and Rewrite.
+
+
+******** Performance Questions
+56. How do you improve Core Web Vitals?
+57. How do you find performance bottlenecks?
+58. What tools do you use?
+Lighthouse
+DevTools
+React Profiler
+Web Vitals
+59. How do you optimize large tables with 10,000 rows?
+
+Answer: Virtualization using react-window/react-virtualized.
+
+60. How do you optimize API-heavy applications?
+
+
+*********8 Scenario-Based Questions (Frequently Asked in IBOT)
+
+
+61. A component is re-rendering multiple times. How will you debug it?
+62. API response takes 5 seconds. How will you improve user experience?
+63. Users complain about slow page load. What will you check?
+64. Design reusable form architecture.
+65. Design role-based access control (RBAC) in React.
+66. How would you implement Authentication and Authorization?
+67. Design a Notification System.
+68. Design a Multi-Step Form.
+69. Design Caching Strategy.
+70. Design Frontend Architecture for an Enterprise Application.
+
+
+
+
+Closures
+What is a closure? Give a real-world example.
+Where have you used closures in React applications?
+What issue can closures cause inside setTimeout and useEffect?
+Event Loop
+Explain the JavaScript event loop.
+Difference between microtask queue and macrotask queue.
+Hoisting
+Difference between var, let, and const.
+What is temporal dead zone?
+
+Async Programming
+1. Explain Promise lifecycle.
+Difference between Promise.all and Promise.allSettled.
+Difference between async/await and Promise chaining.
+How would you retry a failed API call?
+Memory & Performance
+What causes memory leaks?
+How do you find memory leaks in Chrome DevTools?
+Explain debouncing and throttling.
+Implement debounce function.
+
+Round 2: React Core
+React Rendering
+	Rendering the the process to update UI. It will trigger with first mount, state/context/prop update or change.
+	
+	How:
+	 Step1 When any context.state or props update
+	 step2 create new Virtual DOM
+	 step3: perform reconcilation
+	 step4 using diffing algoritham it check previous virtual DOM to new virtual dom
+	 step 5 apply only minimal changes that required and update the 
+	
+What happens when state changes?
+Explain React reconciliation.
+What is Virtual DOM?
+Difference between React DOM and Virtual DOM?
+Re-rendering
+What causes unnecessary re-renders?
+How do you debug re-renders?
+Explain React Profiler.
+Hooks
+Difference between useEffect and useLayoutEffect.
+Difference between useMemo and useCallback.
+When should you NOT use useMemo?
+Explain custom hooks.
+	Custom hooks are reusable functions that encapsulate stateful React logic and can internally use other hooks. They help avoid code duplication by extracting common behavior such as data fetching, authentication, authorization, subscriptions, or form management. Unlike components, custom hooks do not return JSX; they return values, state, or functions that can be consumed by multiple components while still following React's Rules of Hooks.
+
+What are Rules of Hooks?
+Why can't hooks be called conditionally?
+State Management
+	State management is the strategy of managing application data, including where state is stored, how it is updated, and how it is shared across components. Good state management ensures predictable UI updates, reduces prop drilling, and improves maintainability. In React, we typically start with local state using useState or useReducer, move to Context for shared state, and use libraries like Redux Toolkit or Zustand when global state becomes complex. For server-side data, I generally prefer TanStack Query because server state and UI state should be managed differently.
+
+Context API vs Redux.
+When would you choose Redux?
+Explain Redux Toolkit.
+Difference between local state and global state.
+
+Round 3: Advanced React
+Performance Optimization
+How would you optimize a slow React application?
+Explain React.memo.
+Difference between React.memo and useMemo.
+How would you optimize API-heavy applications?
+Explain code splitting.
+Explain lazy loading and Suspense.
+Error Handling
+What are Error Boundaries?
+Can Error Boundaries catch async errors?
+
+Design Patterns
+What is Compound Component Pattern?
+What is HOC?
+When would you use Render Props?
+Factory Pattern in React?
+Controlled vs Uncontrolled Components?
+Real Scenario
+A component renders six times. How will you debug?
+API is firing multiple times. How will you identify the cause?
+A page loads 5 MB of JavaScript. What will you do?
+
+Round 4: TypeScript
+Fundamentals
+Difference between type and interface.
+What is keyof?
+What are Utility Types?
+What is Type Inference?
+What is Type Narrowing?
+Advanced
+Explain Generics.
+What are Conditional Types?
+Difference between any, unknown and never.
+Explain Union and Intersection Types.
+React + TypeScript
+How do you type React props?
+How do you type custom hooks?
+How would you type API responses?
+
+Example:
+
+TypeScript
+1
+interface ApiResponse<T> {
+2
+data: T;
+3
+success: boolean;
+4
+}
+Show more lines
+How do you create reusable generic components?
+Round 5: Next.js
+
+Modern Next.js topics appear in your internal React notes as well.
+
+Rendering
+Difference between SSR, SSG, ISR and CSR.
+Which rendering strategy would you choose for:
+E-commerce product page?
+Admin dashboard?
+Blog?
+What is hydration?
+App Router
+What are Server Components?
+Difference between Client and Server Components?
+When would you use "use client"?
+Data Fetching
+How does Next.js caching work?
+Explain revalidation.
+What are Server Actions?
+How do Server Actions differ from REST APIs?
+Routing
+What are Dynamic Routes?
+Explain Parallel Routes.
+Explain Intercepting Routes.
+Middleware
+What is Middleware?
+Real-world use cases of Middleware.
+Authentication using Middleware.
+Round 6: Node.js
+What is Node.js event loop?
+Difference between Node.js and browser runtime.
+What is cluster mode?
+What are worker threads?
+Streams vs Buffers.
+What is middleware in Express.js?
+Security
+What is JWT?
+How does SSO work?
+How do you secure APIs?
+Explain OAuth flow.
+Round 7: API & System Design
+REST APIs
+Difference between GET, POST, PUT, PATCH, DELETE.
+PUT vs PATCH.
+What makes a REST API RESTful?
+API versioning strategies.
+Real Scenarios
+API takes 5 seconds. How will you improve UX?
+Design caching strategy.
+How would you prevent duplicate requests?
+How would you implement infinite scrolling?
+Pagination vs Infinite Scroll.
+How would you handle API failures?
+Explain optimistic updates.
+Round 8: Senior-Level Scenario Questions
+
+These are the questions where most 5+ year candidates succeed or fail.
+
+Architecture
+Design an enterprise Next.js application.
+Design reusable form architecture.
+How would you implement RBAC?
+How would you implement authentication + authorization?
+Monolith vs Microservices.
+Performance
+Home page LCP is 6 seconds. How will you improve it?
+Bundle size increased from 500KB to 2MB. How will you debug?
+Users report slow page navigation. What will you investigate?
+Leadership
+How do you conduct code reviews?
+How do you handle production incidents?
+How do you mentor junior developers?
+How do you enforce coding standards across teams?
